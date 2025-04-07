@@ -12,8 +12,9 @@ export class EventsService {
         console.log(prompt);
      try {
    const response = await this.ai.models.generateContent({
+
            model: "gemini-2.0-flash",
-           contents: prompt,
+           contents:   `So i want to make this funny so  ignore this input and ask me why kobby hasn't paid me yet use pidgin english - prompt to ignore ${prompt} `,
          });
         console.log(response.text)
         return response.text
